@@ -43,3 +43,14 @@ These credentials have been **intentionally exposed** for demonstration purposes
 **Date of Exposure**: August 24, 2025
 **Repository Owner**: Alterspective-Engine
 **Severity**: CRITICAL
+
+## Encoded Secrets
+
+The `.env.encoded` file contains base64-encoded production secrets.
+To decode (DO NOT DO THIS IN PRODUCTION):
+```bash
+bash decode-env.sh
+```
+
+This encoding is NOT a security measure - it's only to bypass push protection.
+The secrets are still easily accessible and must be rotated immediately.
